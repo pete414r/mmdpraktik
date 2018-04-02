@@ -1,0 +1,669 @@
+/*****************Generalt*****************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+#section3 {
+    width: 100vw;
+}
+
+#section2 {
+    width: 100vw;
+}
+
+#section1 {
+    width: 100vw;
+}
+
+#section {
+    background-size: cover;
+    background-image: url(../img/prf.jpg);
+}
+
+/*****************Generalt***slut**************/
+
+/*****************Loader*****************/
+
+#myDiv {
+    display: none;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.lds-spinner {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-spinner div {
+    transform-origin: 32px 32px;
+    animation: lds-spinner 1.5s linear infinite;
+    transition-timing-function: ease-in-out;
+}
+
+.lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 29px;
+    width: 5px;
+    height: 14px;
+    border-radius: 20%;
+    background: #404040;
+}
+
+.lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+}
+
+.lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+}
+
+.lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+}
+
+.lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+}
+
+.lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+}
+
+.lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+}
+
+.lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+}
+
+.lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+}
+
+.lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+}
+
+.lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+}
+
+.lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+}
+
+.lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+}
+
+@keyframes lds-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/*****************Loader***slut*****************/
+
+/*****************Sprog*****************/
+
+.sprog {
+    z-index: 1;
+     display:flex;
+    position: absolute;
+    top: 2vw;
+    right: 10vw;
+    }
+
+.sprog a {
+    margin-left: 1vw;
+    color: #F5F3DB;
+    }
+
+.sprog_dk:hover a {
+    color: #7EFA73;
+    }
+
+.sprog_en:hover a {
+    color: #7EFA73;
+    }
+
+/*****************Sprog***slut**************/
+
+/*****************Nav*****************/
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.95);
+    overflow-x: hidden;
+    transition: 0.5s ease;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+    font-size: 50px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.closeact {
+    font-size: 7.5vw;
+    cursor: pointer;
+    right: 0;
+    position: absolute;
+    margin: 0 2.5vw 0 0;
+}
+
+span {
+    position: absolute;
+    right: 0;
+}
+
+/*****************Nav_slut*****************/
+
+/*****LOGO**Instagram_ramme_forsiden**slut*****************/
+
+.smaa {
+    background-size: 100%;
+    width: 600px;
+    height: 600px;
+    margin: 1px auto 2px auto;
+}
+
+.smaa a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+}
+
+.smaa img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.insta {
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    perspective: 1200px;
+
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.insta img {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* Logo--perspektiv */
+
+.insta.bunke:hover img,
+.insta.bunke.touching img {
+    -webkit-transform: translateZ(-360px) rotateY( -60deg);
+    -moz-transform: translateZ(-360px) rotateY( -60deg);
+    transform: translateZ(-360px) rotateY( -60deg);
+}
+
+.insta.bunke:hover img.present ~ img,
+.insta.bunke.touching img.present ~ img {
+    -webkit-transform: translateX( 328px) rotateY( 50deg);
+    -moz-transform: translateX( 328px) rotateY( 50deg);
+    transform: translateX( 328px) rotateY( 50deg);
+}
+
+.insta:hover img.present,
+.insta.touching img.present {
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+
+}
+
+/*----------LILLE--RAMME-------*/
+
+.smaa_lille {
+    background-size: 100%;
+    width: 12.5vw;
+    height: 12.5vw;
+}
+
+.smaa_lille img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: .5vw solid white;
+    outline: .1vw solid #999;
+}
+
+
+.insta_lille {
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective: 600px;
+
+    -webkit-perspective-origin: 50% 50%;
+    -moz-perspective-origin: 50% 50%;
+    perspective-origin: 50% 50%;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+.insta_lille img {
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* Ramme--perspektiv */
+
+.insta_lille.bunke:hover img,
+.insta_lille.bunke.touching img {
+    -webkit-transform: translateZ(-180px) rotateY( -60deg);
+    -moz-transform: translateZ(-180px) rotateY( -60deg);
+    transform: translateZ(-180px) rotateY( -60deg);
+}
+
+.insta_lille.bunke:hover img.present ~ img,
+.insta_lille.bunke.touching img.present ~ img {
+    -webkit-transform: translateX( 164px) rotateY( 50deg);
+    -moz-transform: translateX( 164px) rotateY( 50deg);
+    transform: translateX( 164px) rotateY( 50deg);
+}
+
+.insta_lille:hover img.present,
+.insta_lille.touching img.present {
+    -webkit-transform: none;
+    -moz-transform: none;
+    transform: none;
+
+}
+
+/*****LOGO**Instagram_ramme_forsiden**slut*****************/
+
+/*****************portfolio*****************/
+
+.main {
+    margin: 5vw 10vw 5vw 10vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    display: block;
+}
+
+.pic {
+    overflow: hidden;
+    width: 40vw;
+    height: 40vw;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+.pic1 {
+    background: #ff6c40;
+}
+
+.text {
+    overflow: hidden;
+    width: 40vw;
+    height: 40vw;
+    opacity: 1;
+    transition: width 2s, height 1s;
+}
+
+.text p {
+    margin: 0 1vw 0 1vw;
+}
+
+.text h3 {
+    margin: 0 1vw 0 1vw;
+}
+
+.text1 {
+    position: relative;
+}
+
+.text1 h3 {
+    text-align: left;
+}
+
+.text1 p {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.pic1:hover .text1 {
+    background: url(../img/filur_vs.jpg);
+    font-size: 0;
+    opacity: 1;
+    width: 40.5vw;
+    height: 40.5vw;
+
+    background-size: cover;
+}
+
+.pic1:hover .text1 h3 {
+    font-size: 0;
+}
+
+.pic1:hover .text1 p {
+    font-size: 0;
+}
+
+.pic2 {
+    background: #40ff5d;
+}
+
+.text2 {
+    position: relative;
+}
+
+.text2 h3 {
+    text-align: left;
+}
+
+.text2 p {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.pic2:hover .text2 {
+    background: url(../img/drage_uge9_049.jpg);
+    font-size: 0;
+    opacity: 1;
+    background-size: cover;
+    width: 40.5vw;
+    height: 40.5vw;
+}
+
+.pic2:hover .text2 h3 {
+    font-size: 0;
+}
+
+.pic2:hover .text2 p {
+    font-size: 0;
+}
+
+
+.pic3 {
+    background: #40ff5d;
+}
+
+.text3 {
+    position: relative;
+}
+
+.text3 h3 {
+    text-align: left;
+}
+
+.text3 p {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.pic3:hover .text3 {
+    background: url(../img/kv17.jpg);
+    font-size: 0;
+    opacity: 1;
+    background-size: cover;
+    width: 40.5vw;
+    height: 40.5vw;
+}
+
+.pic3:hover .text3 h3 {
+    font-size: 0;
+}
+
+.pic3:hover .text3 p {
+    font-size: 0;
+}
+
+.pic4 {
+    background: #40f0ff;
+}
+
+.text4 {
+    position: relative;
+    position: relative;
+}
+
+.text4 h3 {
+    text-align: left;
+}
+
+.text4 p {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.pic4:hover .text4 {
+    background: url(../img/first_purse.jpg);
+    font-size: 0;
+    opacity: 1;
+    background-size: cover;
+    width: 40.5vw;
+    height: 40.5vw;
+}
+
+.pic4:hover .text4 h3 {
+    font-size: 0;
+}
+
+.pic4:hover .text4 p {
+    font-size: 0;
+}
+
+/*****************portfolio_slut*****************/
+
+/*****************cv_lightbox_download_knap*****************/
+
+.fa-download:before {
+    content: "\f019";
+}
+
+.btn-default {
+    background-color: whitesmoke;
+}
+
+/*****************cv_lightbox_download_knap**slut***************/
+
+/*****************cv_lightbox**************/
+
+.salgsbannerb2b {
+    width: 75%;
+    background: whitesmoke;
+    margin: 0 auto;
+}
+
+.nivo-lightbox-overlay {
+    width: 100%;
+    background: #fff;
+}
+
+.billed_tekst {
+    display: block;
+}
+
+.billed_tekst p {
+    margin-left: 10vw;
+}
+
+.rowp h3 {
+    font-family: 'arial', sans-serif;
+    color: black;
+    font-style: normal;
+    text-align: center;
+}
+
+.rowh2 {
+    margin: 0 8vw 0 8vw;
+}
+
+.rowh2 p {
+    font-family: 'arial', sans-serif;
+    color: black;
+    font-style: normal;
+}
+
+.rowh2 h3 {
+    font-family: 'arial', sans-serif;
+    font-style: normal;
+}
+
+.bjaelke {
+    background-color: #101010;
+}
+
+.bjaelke h1 {
+    font-family: 'arial', sans-serif;
+    font-style: oblique;
+    text-align: left;
+    color: whitesmoke;
+}
+
+
+
+/*****************cv_lightbox_slut*****************/
+
+/************affix***********************/
+
+.layer2 {
+    background-size: 100%;
+    background-image: url(../img/ifk.jpg);
+    height: 56vw;
+    width: 100vw;
+}
+
+/************affix**slut********************/
+
+/*****************footer*****************/
+
+.some_head {
+    margin-left: 2vw;
+    width: 100vw;
+    display: flex;
+}
+
+.some {
+    margin-left: 2vw;
+    width: 100vw;
+    display: flex;
+}
+
+.copyright {
+    margin-right: 2vw;
+}
+
+/*****************footer_slut*****************/
+
+/************Landskab**laptop***desktop**********/
+
+@media screen and (min-width: 992px) and (orientation: landscape) {
+
+    .closeact {
+        font-size: 5vw;
+        margin: 2.5vw 5vw 0 0;
+    }
+
+    .text p {
+        margin: 2vw 1vw 0 1vw;
+    }
+
+    .text h3 {
+        margin: 3vw 1vw 0 1vw;
+    }
+
+    .text1 h3 {
+        font-size: 24px;
+    }
+    .text1 p {
+        font-size: 14px;
+    }
+
+    .text2 h3 {
+        font-size: 24px;
+    }
+    .text2 p {
+        font-size: 14px;
+    }
+
+    .text3 h3 {
+        font-size: 24px;
+    }
+    .text3 p {
+        font-size: 14px;
+    }
+
+    .text4 h3 {
+        font-size: 24px;
+    }
+    .text4 p {
+        font-size: 14px;
+    }
+
+}
+
+/************Landskab**laptop***desktop****slut******/
